@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            td{
+                text-align: center;
+                border-radius: 20px;
+            }
+            table{
+                margin-left: auto;
+                margin-right: auto;
+                border-radius: 20px;
+                width: 50px;
+            }
+            tr{
+                border-radius: 20px;
+            }
+        </style>
+        <script>
+            function table(){
+            var num = parseInt(document.getElementById("num").value);
+            document.getElementById("result").innerHTML="";
+            for(i = 1;i<=10;i++){
+                if(i%2==0){
+                    document.getElementById("result").innerHTML+="<tr bgcolor=red><td>" + num + "</td><td>*</td><td>" + i + "</td><td> = </td><td>" 
+                     + (num * i) + "</td></tr>";
+                }else{
+                document.getElementById("result").innerHTML+="<tr bgcolor=skyblue><td>" + num + "</td><td>*</td><td>" + i + "</td><td> = </td><td>" 
+                     + (num * i) + "</td></tr>";
+                }
+            }
+        }
+        
+        </script>
+    </head>
+    <body>
+        Enter a number:<input type=text name = t1 id = num>
+        <input type = button value = "Show Table" onclick="table()">
+        <table border = 1 id = result>
+
+        </table>
+    </body>
+</html>

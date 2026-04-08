@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let fruits = [
+            {
+                fruit_name: "Apple",
+                color: "Red",
+            },
+            {
+                fruit_name: "Orange",
+                color: "Orange",
+            },
+            {
+                fruit_name: "Pomegranate",
+                color: "Red",
+            },
+            {
+                fruit_name: "Grapes",
+                color: "Green",
+            },
+            {
+                fruit_name: "Kiwi",
+                color: "Green",
+            }
+        ];
+        function filteredFruits(){
+        let selectedColor = document.getElementById("colorSelect").value;
+        let filteredFruits = fruits.filter((fruit) => fruit.color === selectedColor);
+        let result = "";
+        for(let i =0; i<filteredFruits.length; i++){
+           result += filteredFruits[i].fruit_name + "<br>";
+        }
+        document.getElementById("result").innerHTML = "Fruits are: <br> " + result;
+    }
+
+    </script>
+</head>
+<body>
+    <select id="colorSelect">
+        <option value="">Select Color</option>
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Orange">Orange</option>
+    </select>
+    <button onclick="filteredFruits()">Filter Fruits</button>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<html>
+<head>
+<script>
+//Creation of a JSON object to represent details of a book
+const book1 = {
+    title: "Geetanjali",
+    author: "Rabindranath Tagore"
+}
+
+//Creation of a JSON object to represent details of a book
+const book2 = {
+    title: "War and Peace",
+    author: "Leo Tolstoy"
+}
+
+//Creation of a JSON object to represent details of a library
+const Lib = {
+    name: "My Library",
+    books: [book1, book2],
+    addBook:function(book) {
+        this.books.push(book);
+    },
+    removeBook:function(index) {
+        this.books.splice(index, 1);
+    },
+    show:function(){
+		document.getElementById("display").innerHTML="";
+		this.books.forEach((book, index)=>{		
+		document.getElementById("display").innerHTML+=(index+1)+". "+book.title+" was written by "+ book.author+".<button onclick=d("+index+")>Delete</button><br>";
+});
+}
+};
+
+//Creation of a JSON object to represent details of a book
+const book3 = {
+    title: "Harry Potter",
+    author: "J. K. Rowling"
+};
+
+//Call the addBook() method defined in Lib to add another book to the array passed as argument
+Lib.addBook(book3);
+
+
+// Create your own function to display the details of the books
+function showDetails()
+{
+Lib.show();
+}
+
+function d(ind){
+Lib.removeBook(ind);
+Lib.show();
+}
+
+//Create your own function to add a new book to the array books defined in the Lib Object. 
+//The title of the book is read from the textbox with the id title.
+//The author of the book is read from the textbox with the id author.
+
+function add()
+{
+let t=document.getElementById("title").value;
+let a=document.getElementById("author").value;
+if(t.trim().length==0 || a.trim().length==0)
+	{alert("Please enter complete data");
+	return;
+	}
+const book={
+	title:t,
+	author:a
+};
+Lib.addBook(book);
+document.getElementById("title").value="";
+document.getElementById("author").value="";
+alert("Book added successfully");
+}
+
+
+//End of Javascript code
+</script>
+</head>
+<body>
+<table border=1	 align=center>
+<tr>
+<td>Title of the Book 
+<td colspan=2><input type=text id=title>
+</tr>
+<tr>
+<td>Author of the Book 
+<td colspan=2><input type=text id=author><br>
+<tr>
+<td align=center><button onclick=add()>Add to Library</button>
+<td align=center><button onclick=showDetails()>Show Details</button>
+</table>
+<br><br>
+<table border=1 align=center>
+<tr>
+<td colspan=2>
+<div id=display>
+The details of the books will be shown here.
+</div>
+</table>
+</body>
+</html>

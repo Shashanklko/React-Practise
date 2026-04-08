@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function abc(){
+            var t1 = 3000;
+            var t2 = 5000;
+
+            console.log("Function started");
+            setTimeout(()=>{
+                console.log("This content is asynchronous content");
+                console.log("It appears after "+t2+"milliseconds");
+            },t2);
+            setTimeout(()=>{
+                console.log("This content is asynchronous content");
+                console.log("It appears after "+t1+"milliseconds");
+            },t1);
+
+            console.log("Function ended");
+            }
+    </script>
+</head>
+<body>
+    hii
+    <button onclick="abc()">click me</button>
+</body>
+</html>

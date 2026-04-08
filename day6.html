@@ -1,0 +1,105 @@
+<html>
+<head>
+<script>
+//Creation of a JSON object to represent details of a book
+const book1 =  {
+    "name": "Geetanjali",
+    "contact": "+91 7600012000"
+  }
+ const book2 =  {
+    "name": "The Kite Runner",
+    "contact": "+91 9200012000"
+  }
+
+const Info = {
+    books: [book1, book2],
+
+    addBook: function(book) {
+        this.books.push(book);
+    },
+
+    removeBook: function(index) {
+        this.books.splice(index, 1);
+    },
+
+    show: function() {
+        document.getElementById("display").innerHTML = "";
+
+        this.books.forEach((book, index) => {
+            document.getElementById("display").innerHTML +=
+                (index + 1) + ". " + book.name +
+                " | Contact: " + book.contact +
+                ' <button onclick="d(' + index + ')">Delete</button><br>';
+        });
+    }
+};
+
+function add() {
+    let name = document.getElementById("name").value;
+    let contact = document.getElementById("contact").value;
+
+    if (name.trim() === "" || contact.trim() === "") {
+        alert("Please enter complete data");
+        return;
+    }
+
+    const book = {
+        name: name,
+        contact: contact
+    };
+
+    Info.addBook(book);
+
+    // Clear fields
+    document.getElementById("name").value = "";
+    document.getElementById("contact").value = "";
+
+    alert("Book added successfully");
+}
+
+function showDetails() {
+    Info.show();
+}
+
+function d(ind) {
+    Info.removeBook(ind);
+    Info.show();
+}
+
+
+
+//End of Javascript code
+</script>
+</head>
+<body>
+    <table border="1" align="center">
+
+<tr>
+<td>Book Name</td>
+<td><input type="text" id="name"></td>
+</tr>
+
+<tr>
+<td>Author Contact</td>
+<td><input type="text" id="contact"></td>
+</tr>
+
+<tr>
+<td align="center">
+<button onclick="add()">Add to Library</button>
+</td>
+
+<td align="center">
+<button onclick="showDetails()">Show Details</button>
+</td>
+</tr>
+
+</table>
+
+<br><br>
+
+<center><div id="display">
+Books will be shown here.
+</div></center>
+</body>
+</html> 

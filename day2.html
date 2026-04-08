@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript">
+       
+        function reverse(){
+            var num = parseInt(document.getElementById("num").value);
+            document.getElementById("result").innerHTML = ""; 
+            calreverse(num);
+        }
+
+        function calreverse(n){
+            if(n < 1) return; 
+               
+            document.getElementById("result").innerHTML += n + " ";
+            calreverse(n - 1);
+        }
+    </script>
+</head>
+<body>
+
+Enter a number:
+<input type="number" id="num">
+
+<button onclick="reverse()">Start</button>
+
+<p id="result"></p>
+
+</body>
+</html>
