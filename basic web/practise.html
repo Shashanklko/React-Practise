@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <script type="text/javascript">
+        function test(){
+            var element = document.getElementById("testMode");
+            if(element.innerHTML === "Tumhari biwi kaise hai!"){
+                element.innerHTML = 'Mast hai, teri wali kaise hai😁😁😉😉 <br> <button onClick="date()">Click me!</button> <br> <p id = "Date"></p>';
+                element.innerHtML = 
+                element.style.fontStyle = "italic";
+                element.style.fontWeight="bold";
+            } else {
+                element.innerHTML = "Tumhari biwi kaise hai!";
+                element.style.fontStyle = "normal";
+                element.style.fontWeight="normal";
+            }
+        }
+        function date(){
+            document.getElementById("Date").innerHTML=new Date();
+        }
+    </script>
+    <style>
+        p {
+            color:brown;
+            font-family: 'Courier New', Courier, monospace;
+        }
+        button { 
+            color: black;
+            background-color: aqua;
+        }
+        #testMode{
+            color:blueviolet;
+        }
+    </style>
+</head>
+<center>
+<body>
+    <p>JavaScript Can change Content of this Page.</p>
+    <button onClick="test()">Want to test , Then click me!</button>
+    <p>If you have click the above button, Content below might have feel you like Ooo😑</p>
+    <p id="testMode">Tumhari biwi kaise hai!</p>
+    
+    
+</body>
+</center>

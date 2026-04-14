@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function action(){
+           var img =  document.getElementById("glow");
+           if(img.src.match("glow")){
+            img.src="bulboff.png";
+           }else{
+            img.src="glow.png";
+           }
+        }
+    </script>
+</head>
+<body>
+    <h1>Click bulb to on or off Bulb</h1>
+    <center><img onclick="action()" src="glow.png" alt="glow" id="glow" width="100" height="180"></center>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<head>
+<script type="text/javascript">
+    var t = new Date();
+    function timer(){
+        document.getElementById("Date").innerHTML = t.toLocaleTimeString();
+    }
+</script>
+</head>
+<body>
+    <button onclick="setInterval(function(){
+        timer()
+    }, 1000);">Start</button>
+    <p> Today Date and timing is: <i id = "Date"></i></p>
+
+</body>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function table() {
+            var str = parseInt(document.getElementById("num").value);
+            document.getElementById("result").innerHTML = "";
+            for (let i = 1; i < 10; i++) {
+                if (i % 2 == 0) {
+                    document.getElementById("result").innerHTML +=
+                        "<tr style='background-color: cyan;'><td>" + str + "</td><td>*</td><td>" + i + "</td><td>=</td><td>" + (str * i) + "</td></tr>";
+                } else {
+                    document.getElementById("result").innerHTML +=
+                        "<tr style= 'background-color: yellow;'><td>" + str + "</td><td>*</td><td>" + i + "</td><td>=</td><td>" + (str * i) + "</td></tr>";
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <p>Enter a Number:
+        <input id="num" type="number" placeholder="Enter Number">
+        <button onclick="table()">Generate</button>
+    <table border=5 id="result">
+
+    </table>
+    </p>
+</body>
+
+</html>
