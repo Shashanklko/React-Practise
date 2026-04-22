@@ -1,0 +1,5 @@
+Q2. What is JSX?
+A. A database query language
+B. A CSS framework
+C. A syntax extension for JavaScript
+D. A server-side language

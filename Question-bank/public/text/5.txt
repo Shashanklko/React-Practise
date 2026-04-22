@@ -1,0 +1,5 @@
+Q5. What are props in React?
+A. Internal component data
+B. External data passed to components
+C. CSS styles
+D. Database values

@@ -1,0 +1,5 @@
+Q3. Which hook is used to manage state in a functional component?
+A. useEffect
+B. useState
+C. useRef
+D. useMemo

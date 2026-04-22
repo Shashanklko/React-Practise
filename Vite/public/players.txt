@@ -1,0 +1,42 @@
+[
+    {
+        "name": "Virat Kohli",
+        "sport": "Cricket"
+    },
+    {
+        "name": "Lionel Messi",
+        "sport": "Football"
+    },
+    {
+        "name": "Cristiano Ronaldo",
+        "sport": "Football"
+    },
+    {
+        "name": "Rohit Sharma",
+        "sport": "Cricket"
+    },
+    {
+        "name": "LeBron James",
+        "sport": "Basketball"
+    },
+    {
+        "name": "Stephen Curry",
+        "sport": "Basketball"
+    },
+    {
+        "name": "Neymar Jr",
+        "sport": "Football"
+    },
+    {
+        "name": "MS Dhoni",
+        "sport": "Cricket"
+    },
+    {
+        "name": "Kylian Mbappe",
+        "sport": "Football"
+    },
+    {
+        "name": "Kevin Durant",
+        "sport": "Basketball"
+    }
+]

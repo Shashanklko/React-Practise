@@ -1,0 +1,5 @@
+Q1. What is React?
+A. A database management system
+B. A JavaScript library for building user interfaces
+C. A programming language
+D. An operating system

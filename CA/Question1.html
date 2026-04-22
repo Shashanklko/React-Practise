@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+     body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: white;
+    }
+
+    #square {
+
+      width: 300px;
+      height: 300px;
+      border: 3px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #outside {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+    } 
+        
+    </style>
+    <script>
+        var innerIndex = 0;
+        var outerIndex = 0;
+
+        function change() {
+            var color = ["red", "blue", "green"];
+
+            innerIndex++;
+
+            if (innerIndex === color.length) {
+                innerIndex = 0;
+            }
+
+            document.getElementById("square").style.backgroundColor = color[innerIndex];
+        }
+
+        function bchange() {
+           var color = ["red", "blue", "green"];
+
+            outerIndex++;
+
+            if (outerIndex === color.length) {
+                outerIndex = 0;
+            }
+
+            document.body.style.backgroundColor = color[outerIndex];
+        }
+
+    </script>
+</head>
+<body>
+
+    <button id="outside" onClick="bchange()">Outer Background</button>
+
+    <center id="square">
+        <button onclick="change()">InnerBackground</button>
+    </center>
+    
+</body>
+</html>

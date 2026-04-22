@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+    var data = [];
+    function storeData() {
+      var country = document.getElementById("country").value;
+      var currency = document.getElementById("currency").value;
+
+      if (country != "" && currency != "") {
+
+        var obj = new Object();
+        obj.country = country;
+        obj.currency = currency;
+
+        data.push(obj);
+
+        document.getElementById("country").value = "";
+        document.getElementById("currency").value = "";
+      }
+    }
+    function showData() {
+      var output = document.getElementById("output");
+      output.innerHTML = "";
+
+    
+      for (let i = 0; i < data.length; i++) {
+
+        document.getElementById("output").innerHTML = data[i].country + " , " + data[i].currency +
+          " <button onclick='deleteItem(" + i + ")'>DELETE</button>";
+
+        output.appendChild(line);
+      }
+    }
+     function deleteItem(index) {
+      data.splice(index, 1);
+      showData();
+    }  
+    </script>
+</head>
+<center><body>
+<p>Enter Country: <input type="text" id="country" placeholder="Enter Country"></p>
+<p>Enter Country: <input type="text" id="currency" placeholder="Enter Currency"></p>
+
+<button onclick="storeData()">Store</button>
+<button onclick="showData()">Show Details</button>
+
+<div id="output"></div>
+
+</body></center>
+</html>

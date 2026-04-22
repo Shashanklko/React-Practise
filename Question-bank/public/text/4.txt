@@ -1,0 +1,5 @@
+Q4. What does the Virtual DOM do?
+A. Stores data permanently
+B. Improves performance by updating only changed elements
+C. Replaces JavaScript
+D. Connects to the backend
