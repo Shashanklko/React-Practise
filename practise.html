@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Even/Odd</title>
+    <script>
+        async function cal() {
+            let dob = document.getElementById("dob").value;
+            try{ 
+                let num = await sum(dob);
+                display(num);
+            }
+            catch(err){
+             console.log(err);
+            }
+        }
+        function sum(dob) {
+            return new Promise((resolve, reject) => {
+                if (!dob) {
+                    reject("invalid dob");
+                    return
+                }
+
+                let num = 0;
+                while (dob > 0) {
+                    let rem = dob % 10;
+                    num += rem;
+                    dob = Math.floor(dob / 10);
+                }
+                resolve(num);
+            });
+        }
+        function display(num) {
+            let result = document.getElementById("result");
+            result.innerHTML = "";
+            let even_odd = (num) => num % 2 ? "Odd" : "Even";
+            result.innerHTML = even_odd(num);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Check Your date of Birth is Even or Odd</h1>
+    <p> Even/Odd DOB mean calculating all number should be give even number or odd number</p>
+    <p>Enter your DOB in Given format</p>
+    <h3>Enter DOB:
+        <input type="number" placeholder="12012006" id="dob">
+        <button onclick="cal()">Check</button>
+    </h3>
+    <p id="result"></p>
+</body>
+
+</html>

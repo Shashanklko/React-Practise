@@ -1,0 +1,82 @@
+[
+  {
+    "brandLogo": "https://www.google.com/s2/favicons?domain=google.com&sz=128",
+    "company": "Google",
+    "time": "3 Days Ago",
+    "role": "Product Designer",
+    "tag1": "Full Time",
+    "tag2": "Senior Level",
+    "pay": "$150/hr",
+    "location": "Bangalore, India"
+  },
+  {
+    "brandLogo": "https://www.google.com/s2/favicons?domain=apple.com&sz=128",
+    "company": "Apple",
+    "time": "1 Week Ago",
+    "role": "UI/UX Designer",
+    "tag1": "Full Time",
+    "tag2": "Mid Level",
+    "pay": "$140/hr",
+    "location": "California, USA"
+  },
+  {
+    "brandLogo": "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128",
+    "company": "Microsoft",
+    "time": "2 Days Ago",
+    "role": "UX Researcher",
+    "tag1": "Part Time",
+    "tag2": "Senior Level",
+    "pay": "$130/hr",
+    "location": "Hyderabad, India"
+  },
+  {
+    "brandLogo": "https://www.google.com/s2/favicons?domain=amazon.com&sz=128",
+    "company": "Amazon",
+    "time": "5 Days Ago",
+    "role": "Senior UI/UX Designer",
+    "tag1": "Full Time",
+    "tag2": "Senior Level",
+    "pay": "$120/hr",
+    "location": "Mumbai, India"
+  },
+  {
+    "brandLogo": "https://www.google.com/s2/favicons?domain=meta.com&sz=128",
+    "company": "Meta",
+    "time": "4 Days Ago",
+    "role": "Interaction Designer",
+    "tag1": "Full Time",
+    "tag2": "Mid Level",
+    "pay": "$145/hr",
+    "location": "Menlo Park, USA"
+  },
+  {
+    "brandLogo": "https://www.google.com/s2/favicons?domain=netflix.com&sz=128",
+    "company": "Netflix",
+    "time": "1 Day Ago",
+    "role": "Visual Designer",
+    "tag1": "Full Time",
+    "tag2": "Senior Level",
+    "pay": "$160/hr",
+    "location": "Los Gatos, USA"
+  },
+  {
+    "brandLogo": "https://www.google.com/s2/favicons?domain=spotify.com&sz=128",
+    "company": "Spotify",
+    "time": "6 Hours Ago",
+    "role": "Product Researcher",
+    "tag1": "Full Time",
+    "tag2": "Mid Level",
+    "pay": "$115/hr",
+    "location": "Stockholm, Sweden"
+  },
+  {
+    "brandLogo": "https://www.google.com/s2/favicons?domain=tesla.com&sz=128",
+    "company": "Tesla",
+    "time": "12 Hours Ago",
+    "role": "UI Engineer",
+    "tag1": "Full Time",
+    "tag2": "Junior Level",
+    "pay": "$105/hr",
+    "location": "Austin, USA"
+  }
+]
